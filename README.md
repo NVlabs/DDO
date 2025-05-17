@@ -30,7 +30,7 @@
 
 ## Introduction
 
-Direct Discriminative Optimization (DDO) enables GAN-style finetuning of likelihood-based generative models, such as diffusion and autoregressive models, without requiring an explicit discriminator network. By leveraging reverse KL divergence and self-generated negative samples—similar in spirit to reinforcement learning methods used in large language models—DDO overcomes the limitations of traditional maximum likelihood training, which relies on forward KL and often leads to mode-covering behavior. As a result, DDO can substantially improve the quality of generated outputs.
+**Direct Discriminative Optimization (DDO)** enables **GAN-style finetuning** of likelihood-based generative models, such as **diffusion and autoregressive** models, without requiring an explicit discriminator network. By incorporating **reverse KL divergence** and **self-generated negative samples**—similar in spirit to **reinforcement learning methods used in large language models**—DDO overcomes the limitations of traditional **maximum likelihood training**, which relies on **forward KL** and often leads to **mode-covering behavior**. As a result, DDO can **substantially improve the quality** of generated outputs.
 
 ## Available Models
 We release our finetuned checkpoints in [nvidia/DirectDiscriminativeOptimization · Hugging Face](https://huggingface.co/nvidia/DirectDiscriminativeOptimization).
