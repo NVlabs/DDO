@@ -1,4 +1,4 @@
-# DDO: A Universal Supercharger for Visual Diffusion/Autoregressive Models 🚀 SOTA on ImageNet 512x512
+# DDO: A Universal Supercharger for Visual Diffusion/Autoregressive Models 🚀 SOTA on ImageNet
 
 <div align="center">
 
