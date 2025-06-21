@@ -130,6 +130,10 @@ torchrun --nproc_per_node=8 VAR_sample.py --depth $DEPTH --cfg $CFG
 
 Please use the [OpenAI's FID evaluation toolkit](https://github.com/openai/guided-diffusion/tree/main/evaluations) and reference stats file [VIRTUAL_imagenet256_labeled.npz](https://openaipublic.blob.core.windows.net/diffusion/jul-2021/ref_batches/imagenet/256/VIRTUAL_imagenet256_labeled.npz) to evaluate FID, IS, precision, and recall.
 
+## Training
+
+TODO
+
 ## License
 
 Copyright &copy; 2025, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
