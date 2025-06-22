@@ -20,6 +20,12 @@
   </p>
 </div>
 
+<div>
+  <p align="center" style="font-size: larger;">
+    <a href="https://research.nvidia.com/labs/dir/ddo/"><i>Project Page</i></a>
+  </p>
+</div>
+
 <p align="center">
 <img src="assets/grid_ddo.jpg" width=95%>
   <p align="center">
@@ -29,6 +35,10 @@
 
 
 ## Introduction
+
+![](assets/ddo-teaser.jpg)
+
+![](assets/ddo-pipeline.jpg)
 
 **Direct Discriminative Optimization (DDO)** enables **GAN-style finetuning** of likelihood-based generative models, such as **diffusion and autoregressive** models, without requiring an explicit discriminator network. By incorporating **reverse KL divergence** and **self-generated negative samples**—similar in spirit to **reinforcement learning methods used in large language models**—DDO overcomes the limitations of traditional **maximum likelihood training**, which relies on **forward KL** and often leads to **mode-covering behavior**. As a result, DDO can **substantially improve the generation quality without changing the network architecture or inference protocol**.
 
@@ -43,12 +53,12 @@ We release our finetuned checkpoints in [nvidia/DirectDiscriminativeOptimization
 
 | Model                 | #Parameters     | FID w/o guidance | FID w/ guidance |
 |---------------------------|------------------|------------------|-----------------|
-| `edm-cifar10-uncond-vp-ddo.pkl` | 56M | 1.38                | -               |
-| `edm-cifar10-cond-vp-ddo.pkl`   | 56M | 1.30                | -               |
-| `edm2-img64-s-ddo.pkl`          | 280M | 0.97                | -               |
-| `edm2-img512-l-ddo.pkl`         | 777M | 1.26                | 1.21               |
-| `var_d16-ddo.pth`               | 310M | 3.12                | 2.54               |
-| `var_d30-ddo.pth`               | 2.0B | 1.79                | 1.73               |
+| `edm-cifar10-uncond-vp-ddo.pkl` | 56M | **1.38**                | -               |
+| `edm-cifar10-cond-vp-ddo.pkl`   | 56M | **1.30**                | -               |
+| `edm2-img64-s-ddo.pkl`          | 280M | **0.97**                | -               |
+| `edm2-img512-l-ddo.pkl`         | 777M | 1.26                | **1.21**               |
+| `var_d16-ddo.pth`               | 310M | 3.12                | **2.54**               |
+| `var_d30-ddo.pth`               | 2.0B | 1.79                | **1.73**               |
 
 ## Reproducing FID Results
 
