@@ -26,7 +26,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--cfg", type=float, default=1.0)
 parser.add_argument("--depth", type=int, default=16)
 parser.add_argument("--sample_dir", type=str, default="./samples")
-parser.add_argument("--trick", type=bool, default=False)
+parser.add_argument("--trick", action="store_true")
 
 args = parser.parse_args()
 
