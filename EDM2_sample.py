@@ -123,7 +123,11 @@ class DPM_Solver_v3:
         self.device = device
         self.noise_schedule = noise_schedule
         self.steps = steps
-        t_0 = 1.0 / self.noise_schedule.total_N if t_end is None else t_end
+        if t_end is None:
+            assert hasattr(self.noise_schedule, 'total_N'), "t_end must be specified for NoiseScheduleEDM"
+            t_0 = 1.0 / self.noise_schedule.total_N
+        else:
+            t_0 = t_end
         t_T = self.noise_schedule.T if t_start is None else t_start
         assert (
             t_0 > 0 and t_T > 0
@@ -316,7 +320,7 @@ class DPM_Solver_v3:
         # lambda_lst: [..., lambda_s, lambda_t]
         ns = self.noise_schedule
         n = order - 1
-        indexes = [-i - 1 for i in range(n + 1)]
+        indexes = [-i - 1 for i in range(max(n + 1, 2))]
         indexes[0] = -2
         indexes[1] = -1
         x_0n = index_list(x_lst, indexes)
