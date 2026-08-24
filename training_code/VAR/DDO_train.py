@@ -27,7 +27,7 @@ def build_vae_var_with_ref(
     num_classes=1000, depth=16, shared_aln=False, attn_l2_norm=True,
     flash_if_available=True, fused_if_available=True,
     init_adaln=0.5, init_adaln_gamma=1e-5, init_head=0.02, init_std=-1,   # init_std < 0: automated
-) -> Tuple[VQVAE, VAR]:
+) -> Tuple[VQVAE, VAR, VAR]:
     heads = depth
     width = depth * 64
     
@@ -104,7 +104,6 @@ def build_everything(args: arg_util.Args):
         print(f'[dataloader multi processing] ...', end='', flush=True)
         stt = time.time()
         iters_train = len(ld_train)
-        ld_train = iter(ld_train)
         # noinspection PyArgumentList
         print(f'     [dataloader multi processing](*) finished! ({time.time()-stt:.2f}s)', flush=True, clean=True)
         print(f'[dataloader] gbs={args.glb_batch_size}, lbs={args.batch_size}, iters_train={iters_train}, types(tr, va)={types}')
